@@ -40,6 +40,10 @@ echo -e "${YELLOW}Устанавливаем Fish shell...${NC}"
 apt-get update
 apt-get install -y fish
 
+echo -e "${YELLOW}Устанавливаем Neovim...${NC}"
+apt-get install -y neovim
+
+
 # Создание пользователя с заданными именем и паролем
 echo -e "${YELLOW}Создаем пользователя $USERNAME с sudo правами...${NC}"
 if id "$USERNAME" &>/dev/null; then
@@ -56,7 +60,7 @@ else
     echo "$USERNAME:$PASSWORD" | chpasswd
     usermod -aG sudo "$USERNAME"
     echo -e "${GREEN}Пользователь $USERNAME создан и добавлен в группу sudo${NC}"
-    echo -e "${GREEN}Fish установлен как оболочка по умолчанию для $USERNAME${NC}"
+    echo -e "${GREEN}Fish и Nvim установлен как оболочка по умолчанию для $USERNAME${NC}"
 fi
 
 # Настройка Fish для пользователя
