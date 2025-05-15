@@ -73,8 +73,6 @@ alias gs='git status'
 alias vim='nvim'
 function fish_greeting
     echo "Добро пожаловать в среду разработки на Ubuntu!"
-    echo "Установлены: Git, Python, Go, Docker, Neovim"
-    echo "Используйте 'sudo' для команд администратора"
 end
 EOF
 
